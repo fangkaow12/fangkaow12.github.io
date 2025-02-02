@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Group4 Sec27</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<style>
+.header {
+    background-color: #496fee; /* กำหนดสีฟ้า */
+    color: white; /* กำหนดสีตัวอักษร */
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+    padding: 50px 0; /* กำหนดระยะห่างข้างบน-ล่าง */
+}
+
+.member-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* ปรับให้รูปไม่เสียสัดส่วน */
+}
+
+.member-info {
+    margin-top: 10px; /* เพิ่มระยะห่างจากรูปภาพลงมา คือเป็นระยะห่างระหว่างใต้รูป */
+}
+
+.email-button {
+    background-color: #496fee; /* สีปุ่มเป็นสีฟ้า */
+    color: white; /* เปลี่ยนสีตัวอักษรเป็นสีขาว */
+    font-size: 18px; /* ปรับขนาดตัวอักษร */
+    padding: 10px 20px; /* ปรับขนาดขอบของปุ่ม */
+    border: none; /* ลบเส้นขอบ */
+    border-radius: 8px; /* ทำให้ขอบมน */
+    cursor: pointer; /* เปลี่ยนเมาส์เป็นรูปมือเมื่อชี้ */
+    transition: background 0.3s; /* เพิ่มเอฟเฟกต์เวลา hover */
+    text-decoration: none; /* ลบขีดเส้นใต้ */
+    display: inline-block; /* ให้ปุ่มมีขนาดพอดี */
+}
+
+.email-button:hover {
+    background-color: #3742c2; /* เปลี่ยนสีเมื่อชี้เมาส์ */
+}
+
+
+</style>
+
+<body>
+
+    <!----- Navbar มุมบนซ้าย+ขวา ----->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Sec27 Group4</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#members">Members</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!----- Header Section ----->
+    <header class="header">
+        <div class="container">
+            <h1>Welcome to Sec27 Group4 อังคารเช้า</h1>
+            <p class="lead">"Deadline ไม่มาปัญญาไม่เกิด"</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2>About Us</h2>
+            <p>Sec27 อังคารเช้า กลุ่มที่ 4 สาขาวิศวกรรมระบบไอโอทีและสารสนเทศและฟิสิกส์อุตสาหกรรม (2 ปริญญา)</p>
+        </div>
+    </section>
+
+    <!----- Members Section ----->
+    <section id="members" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>Meet Our Members</h2>
+            <div class="row mt-4">
+                <!-- Member 1 -->
+                <div class="col-md-4">
+                    <img src="assets/images/IMG_3096.JPG" class="member-img" alt="Member 1 (Leader)">
+                    <h5 class="member-info">Nook (Leader)</h5>
+                    <p class="member-info">นายกฤตเมธ เพ็ชรรักษา (นุก)</p>
+                    <p class="member-info">66010024@kmitl.ac.th</p>
+                </div>
+                <!-- Member 2 -->
+                <div class="col-md-4">
+                    <img src="assets/images/IMG_3097.JPG" class="member-img" alt="Member 2">
+                    <h5 class="member-info">Praew</h5>
+                    <p class="member-info">นางสาวณหทัย พนาวงศ์ (เพรียว)</p>
+                    <p class="member-info">66010220@kmitl.ac.th</p>
+                </div>
+                <!-- Member 3 -->
+                <div class="col-md-4">
+                    <img src="assets/images/IMG_3099.JPG" class="member-img" alt="Member 3">
+                    <h5 class="member-info">Fang</h5>
+                    <p class="member-info">นางสาวณัฐวดี ปานนุ้ย (ฟาง)</p>
+                    <p class="member-info">66010263@kmitl.ac.th</p>
+                </div>
+                <!-- Member 4 -->
+                <div class="col-md-4">
+                    <img src="assets/images/IMG_3100.JPG" class="member-img" alt="Member 4">
+                    <h5 class="member-info">Tang</h5>
+                    <p class="member-info">นางสาวรุ่งอรุณ แก้วสุวรรณ์ (แตงกวา)</p>
+                    <p class="member-info">66010710@kmitl.ac.th</p>
+                </div>
+                <!-- Member 5 -->
+                <div class="col-md-4">
+                    <img src="assets/images/IMG_3098.JPG" class="member-img" alt="Member 5">
+                    <h5 class="member-info">Guy</h5>
+                    <p class="member-info">นายวีระชัย ศรพรหม (กาย)</p>
+                    <p class="member-info">66010780@kmitl.ac.th</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----- Contact Section ----->
+    <section id="contact" class="py-5">
+        <div class="container text-center">
+            <h2>Contact Us</h2>
+            <p>สามารถติดต่อหาเราได้ที่ 66010024@kmitl.ac.th</p>
+            <a href="mailto:66010024@kmitl.ac.th" class="email-button">Email Us</a>
+        </div>
+    </section>
+
+    <!----- Footer ----->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Sec27 Group4. All Rights Reserved.</p>
+    </footer>
+
+    <!----- Bootstrap JS ----->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
