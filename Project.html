@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พื้นหลังสีฟ้า + รูปเลื่อนลงเมื่อ Scroll</title>
+
+    <style>
+        /* ตั้งค่า body ให้เต็มจอ + พื้นหลังสีฟ้า */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            width: 100vw;
+            background-color: #496fee;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* จัดการรูปภาพให้ขนาดพอดี */
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* ปรับรูปเต็มจอแบบพอดีขอบ */
+        }
+
+        /* เมื่อรูปอยู่ใน viewport จะแสดงขึ้นมา */
+        .member-img.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ใส่รูปภาพ -->
+    <img src="assets/Booking Book/จองหนังสือ/1.png" class="img" alt="SlamBook">
+    <img src="assets/Booking Book/จองหนังสือ/2.png" class="img" alt="2">
+    <img src="assets/Booking Book/จองหนังสือ/3.png" class="img" alt="3">
+    <img src="assets/Booking Book/จองหนังสือ/4.png" class="img" alt="4">
+    <img src="assets/Booking Book/จองหนังสือ/5.png" class="img" alt="5">
+    <img src="assets/Booking Book/จองหนังสือ/6.png" class="img" alt="6">
+    <img src="assets/Booking Book/จองหนังสือ/7.png" class="img" alt="7">
+    <img src="assets/Booking Book/จองหนังสือ/8.png" class="img" alt="8">
+    <img src="assets/Booking Book/จองหนังสือ/9.png" class="img" alt="9">
+    <img src="assets/Booking Book/จองหนังสือ/10.png" class="img" alt="10">
+    <img src="assets/Booking Book/จองหนังสือ/11.png" class="img" alt="11">
+    <img src="assets/Booking Book/จองหนังสือ/12.png" class="img" alt="12">
+    <img src="assets/Booking Book/จองหนังสือ/13.png" class="img" alt="13">
+    <img src="assets/Booking Book/จองหนังสือ/14.png" class="img" alt="14">
+    <img src="assets/Booking Book/จองหนังสือ/15.png" class="img" alt="15">
+    <img src="assets/Booking Book/จองหนังสือ/16.png" class="img" alt="16">
+    <img src="assets/Booking Book/จองหนังสือ/17.png" class="img" alt="17">
+    <img src="assets/Booking Book/จองหนังสือ/18.png" class="img" alt="18">
+    <img src="assets/Booking Book/จองหนังสือ/19.png" class="img" alt="19">
+
+    <!-- JavaScript ทำให้รูปแสดงตอน Scroll -->
+    <script>
+        const images = document.querySelectorAll('img');
+
+        function checkScroll() {
+            images.forEach((img) => {
+                const imgPosition = img.getBoundingClientRect().top;
+                const screenHeight = window.innerHeight;
+
+                // เช็คว่ารูปเข้ามาในจอหรือยัง
+                if (imgPosition < screenHeight - 100) {
+                    img.classList.add('show');
+                }
+            });
+        }
+
+        // เรียกใช้ตอนเลื่อนเม้าส์
+        window.addEventListener('scroll', checkScroll);
+
+        // เรียกครั้งแรกเผื่อรูปโผล่บนจออยู่แล้ว
+        checkScroll();
+    </script>
+
+</body>
+
+</html>
